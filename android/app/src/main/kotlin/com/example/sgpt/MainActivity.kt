@@ -1,4 +1,4 @@
-package com.example.sgpt
+package com.sahil.studentai
 
 import android.os.Build
 import android.os.Bundle

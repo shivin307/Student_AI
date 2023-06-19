@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import '../data/globals.dart';
@@ -9,8 +10,8 @@ import '../model/app_data_model.dart';
 class ApiService {
   static Future<String> fetchApi(String apiKey, String content) async {
     try {
-      // String url = 'https://chimeragpt.adventblocks.cc/v1/chat/completions';
-      String url = 'https://api.hypere.app/v1/chat/completions';
+      String url = 'https://chimeragpt.adventblocks.cc/v1/chat/completions';
+      // String url = 'https://api.hypere.app/v1/chat/completions';
 
       final Map<String, String> headers = {
         'authorization': 'Bearer $apiKey'
@@ -63,37 +64,17 @@ class ApiService {
 
   static Future<bool> serverStatus() async {
     try {
-      // String url = 'https://chimeragpt.adventblocks.cc/';
-      const String url = 'https://api.hypere.app/v1/chat/completions';
+      String url = 'https://chimeragpt.adventblocks.cc/';
 
-      final Map<String, String> headers = {
-        // 'authorization': 'Bearer ${dotenv.env['API_KEY']!}',
-        'authorization': 'Bearer $apiKey',
-        'Content-Type': 'application/json'
-      };
-      final Map<String, dynamic> data = {
-        'model': 'gpt-3.5-turbo',
-        'messages': [
-          {
-            'role': 'user',
-            'content': 'hi',
-          }
-        ],
-        'max_tokens': 2048
-      };
-
-      final res = await http.post(Uri.parse(url),
-          headers: headers, body: json.encode(data));
-
-      // print('Status Code: ${res.statusCode}');
-      // print(res.body);
+      final res = await http.get(Uri.parse(url));
 
       print(res.statusCode);
-      // print('Chimera, $apiKey');
-      print('FoxGPT, $apiKey');
-
+      print('Chimera, $apiKey');
       return res.statusCode == 200;
     } catch (e) {
+      if (kDebugMode) {
+        print('Error : $e');
+      }
       return false;
     }
   }
