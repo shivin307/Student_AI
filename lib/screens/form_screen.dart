@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:sgpt/data/secrets.dart';
 import 'package:sgpt/screens/quiz_screen.dart';
 import 'package:sgpt/widgets/form_skeleton.dart';
