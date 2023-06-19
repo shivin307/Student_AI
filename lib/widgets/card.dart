@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/widgets/frosted_glass.dart';
 
 import '../data/icons.dart';

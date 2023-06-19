@@ -34,6 +34,5 @@ class SupportUs extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }

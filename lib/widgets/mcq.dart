@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../model/quiz_model.dart';
 
+// ignore: must_be_immutable
 class MCQ extends StatefulWidget {
   MCQ(
       {Key? key,

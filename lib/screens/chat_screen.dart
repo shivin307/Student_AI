@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,7 +16,8 @@ class ChatScreen extends StatefulWidget {
   final String chatController;
   bool isFormRoute;
 
-  ChatScreen({required this.chatController, required this.isFormRoute});
+  ChatScreen(
+      {super.key, required this.chatController, required this.isFormRoute});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -56,7 +58,9 @@ class _ChatScreenState extends State<ChatScreen> {
         _isAITyping = false;
       });
     } catch (e) {
-      print("Error: $e");
+      if (kDebugMode) {
+        print('Error : $e');
+      }
     }
   }
 
@@ -87,53 +91,53 @@ class _ChatScreenState extends State<ChatScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back_ios_new_rounded),
+              icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
             foregroundColor: Colors.black,
-            title: Text(
+            title: const Text(
               'Chat',
             ),
             backgroundColor: Colors.transparent,
             actions: [
               IconButton(
-                icon: Icon(Icons.delete_forever),
+                icon: const Icon(Icons.delete_forever),
                 onPressed: () {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return FrostedGlass(
                         child: AlertDialog(
-                          insetPadding: EdgeInsets.all(16),
+                          insetPadding: const EdgeInsets.all(16),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'Clear this chat?',
                                 style: TextStyle(
                                   fontWeight: fwBanner,
                                   fontSize: 20,
                                 ),
                               ),
-                              SizedBox(height: 10),
-                              Text(
+                              const SizedBox(height: 10),
+                              const Text(
                                 'This action cannot be undone. \nAre you sure you want to delete this chat?',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w300,
                                   fontSize: 15,
                                 ),
                               ),
-                              SizedBox(height: 25),
+                              const SizedBox(height: 25),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   TextButton(
-                                    child: Text('Cancel'),
+                                    child: const Text('Cancel'),
                                     onPressed: () => Navigator.pop(context),
                                   ),
-                                  SizedBox(width: 15),
+                                  const SizedBox(width: 15),
                                   ElevatedButton(
-                                    child: Text('Clear chat'),
+                                    child: const Text('Clear chat'),
                                     onPressed: () => setState(
                                       () {
                                         msgList.clear();
@@ -181,8 +185,8 @@ class _ChatScreenState extends State<ChatScreen> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
-                          decoration: BoxDecoration(
+                          margin: const EdgeInsets.symmetric(vertical: 10),
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(20),
@@ -193,11 +197,11 @@ class _ChatScreenState extends State<ChatScreen> {
                           child: Column(
                             children: [
                               Container(
-                                child: SpinKitThreeInOut(
+                                child: const SpinKitThreeInOut(
                                   color: Colors.black54,
                                   size: 20,
                                 ),
-                                margin: EdgeInsets.symmetric(
+                                margin: const EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 14),
                               ),
                             ],
@@ -205,7 +209,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         )
                       ],
                     )
-                  : SizedBox(
+                  : const SizedBox(
                       height: 10,
                     ),
               searchBar(
@@ -218,7 +222,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 },
                 chat: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               )
             ],

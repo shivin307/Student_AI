@@ -42,7 +42,7 @@ class infoCard extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             const Text(

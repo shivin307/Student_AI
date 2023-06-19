@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../data/constants.dart';
-import '../data/globals.dart';
 
 class CardSkeleton extends StatelessWidget {
   final itemCount;
@@ -11,8 +10,8 @@ class CardSkeleton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      physics: const BouncingScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: cardAspectRatio,
         crossAxisSpacing: 10,
@@ -45,7 +44,7 @@ class CardSkeleton extends StatelessWidget {
                       width: 25,
                     )),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,

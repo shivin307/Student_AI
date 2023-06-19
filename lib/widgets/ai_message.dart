@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:markdown/markdown.dart' as md;
-import 'package:sgpt/data/constants.dart';
 
 class aiMessage extends StatelessWidget {
   const aiMessage({

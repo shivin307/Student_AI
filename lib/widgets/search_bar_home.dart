@@ -25,11 +25,11 @@ class _searchBarState extends State<searchBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 13),
+      padding: const EdgeInsets.symmetric(horizontal: 13),
       child: FrostedGlass(
         child: Container(
           height: 55,
-          padding: EdgeInsets.only(left: 15, right: 5),
+          padding: const EdgeInsets.only(left: 15, right: 5),
           decoration: BoxDecoration(
               border: Border.all(
                   color: widget.chat ? Colors.black87 : iwhite70, width: 3),

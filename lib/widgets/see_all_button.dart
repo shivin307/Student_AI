@@ -14,16 +14,16 @@ class SeeAll extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AppScreen(),
+              builder: (context) => const AppScreen(),
             ));
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 13, vertical: 5),
-        margin: EdgeInsets.only(right: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 5),
+        margin: const EdgeInsets.only(right: 16),
         width: 120,
         decoration: BoxDecoration(
             color: iwhite70, borderRadius: BorderRadius.circular(11)),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(

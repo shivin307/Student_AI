@@ -10,7 +10,7 @@ class MadeWith extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 50, bottom: 60),
       child: Text.rich(
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 21,
           color: iwhite70,
           fontFamily: 'Pacifico',

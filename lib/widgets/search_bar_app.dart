@@ -19,8 +19,8 @@ class _appSearchBarState extends State<appSearchBar> {
   Widget build(BuildContext context) {
     return Container(
       height: 55,
-      margin: EdgeInsets.symmetric(horizontal: 13),
-      padding: EdgeInsets.only(left: 15, right: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 13),
+      padding: const EdgeInsets.only(left: 15, right: 5),
       decoration: BoxDecoration(
           border: Border.all(color: iwhite70, width: 3),
           color: Colors.black12,
@@ -71,8 +71,8 @@ class _appSearchBarState extends State<appSearchBar> {
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: showIconSearch
-                    ? Icon(Icons.close, color: Colors.black)
-                    : Icon(Icons.search, color: Colors.black),
+                    ? const Icon(Icons.close, color: Colors.black)
+                    : const Icon(Icons.search, color: Colors.black),
               ),
             ),
           ),

@@ -14,15 +14,15 @@ class userMessage extends StatelessWidget {
         Flexible(
           child: Container(
             decoration: BoxDecoration(
-              color: Color(0xffdcf8c6).withOpacity(0.8),
-              borderRadius: BorderRadius.only(
+              color: const Color(0xffdcf8c6).withOpacity(0.8),
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
                 topLeft: Radius.circular(20),
               ),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               left: 45,
               top: 5,
               bottom: 5,
@@ -39,9 +39,9 @@ class userMessage extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.all(8),
-          child: CircleAvatar(
+          child: const CircleAvatar(
               radius: 15,
-              child: const Icon(
+              child: Icon(
                 Icons.man,
                 size: 20,
               )),

@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: GoogleFonts.getTextTheme('Ubuntu'),
         ),
-        home: SplashScreen(),
+        home: const SplashScreen(),
       ),
     );
   }

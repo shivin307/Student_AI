@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/widgets/app_title.dart';
@@ -33,10 +34,15 @@ class _AppScreenState extends State<AppScreen> {
       List<AppData> data = await ApiService.getCard(limit: value, query: query);
       setState(() {
         allCards = data;
-        print(allCards);
+        if (kDebugMode) {
+          print('Error : $allCards');
+        }
       });
     } catch (e) {
-      print("Error: $e");
+      if (kDebugMode) {
+        print('Error : $e');
+      }
+      return false;
     }
   }
 
@@ -71,12 +77,12 @@ class _AppScreenState extends State<AppScreen> {
       appBar: AppBar(
           automaticallyImplyLeading: false,
           surfaceTintColor: itrans,
-          title: AppTitle(),
+          title: const AppTitle(),
           elevation: 0.0,
           backgroundColor: Colors.transparent,
           actions: [
             ServerIndicator(isServerUp: isServerUp),
-            SizedBox(width: 15)
+            const SizedBox(width: 15)
           ]),
       body: Stack(
         children: [
@@ -87,7 +93,7 @@ class _AppScreenState extends State<AppScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 100.0),
+            padding: const EdgeInsets.only(top: 100.0),
             child: Column(
               children: [
                 appSearchBar(
@@ -96,7 +102,7 @@ class _AppScreenState extends State<AppScreen> {
                   },
                   searchController: appScreenController,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
                   child: Expanded(
                     child: SingleChildScrollView(
@@ -104,10 +110,10 @@ class _AppScreenState extends State<AppScreen> {
                       child: Column(
                         children: [
                           allCards.isEmpty
-                              ? CardSkeleton(itemCount: 6)
+                              ? const CardSkeleton(itemCount: 6)
                               : GridView.builder(
                                   shrinkWrap: true,
-                                  physics: BouncingScrollPhysics(),
+                                  physics: const BouncingScrollPhysics(),
                                   gridDelegate:
                                       const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 2,
@@ -129,7 +135,7 @@ class _AppScreenState extends State<AppScreen> {
                                     );
                                   },
                                 ),
-                          SizedBox(height: 20)
+                          const SizedBox(height: 20)
                         ],
                       ),
                     ),

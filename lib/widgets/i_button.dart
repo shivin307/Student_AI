@@ -13,7 +13,7 @@ class IButton extends StatelessWidget {
           builder: (BuildContext context) {
             return const infoCard();
           }),
-      child: Container(
+      child: const SizedBox(
         width: 35,
         child: Icon(Icons.info, color: Colors.white70),
       ),
