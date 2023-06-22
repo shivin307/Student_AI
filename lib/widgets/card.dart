@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sgpt/widgets/frosted_glass.dart';
 
-import '../data/icons.dart';
 import '../model/app_data_model.dart';
 
 class CardWidget extends StatelessWidget {
@@ -40,14 +39,17 @@ class CardWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.7),
+                    color: Colors.white.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Icon(
-                      icons[data.icon],
-                      color: Colors.white,
+                      IconData(
+                        int.parse(data.icon),
+                        fontFamily: 'MaterialIcons',
+                      ),
+                      // color: Colors.white,
                       size: 30,
                     ),
                   ),
