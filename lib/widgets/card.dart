@@ -74,13 +74,13 @@ class CardWidget extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 10,
                     ),
                     Text(
                       data.disc,
                       style: TextStyle(
                         color: Colors.black.withOpacity(0.8),
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
