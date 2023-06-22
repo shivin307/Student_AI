@@ -13,7 +13,7 @@ class ShareCard extends StatelessWidget {
         final box = context.findRenderObject() as RenderBox?;
 
         Share.share(
-            'https://github.com/shivin307/Student_AI/releases/download/latest',
+            'https://github.com/shivin307/Student_AI/releases/latest',
             subject: 'Share App',
             sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
       },
