@@ -20,7 +20,7 @@ class _ServerIndicatorState extends State<ServerIndicator> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
-        color: Colors.black87,
+        color: Colors.black38,
         borderRadius: BorderRadius.circular(21),
       ),
       child: Row(

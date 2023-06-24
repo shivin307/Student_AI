@@ -22,8 +22,11 @@ class SeeAll extends StatelessWidget {
         margin: const EdgeInsets.only(right: 16),
         width: 120,
         decoration: BoxDecoration(
-            color: iwhite70, borderRadius: BorderRadius.circular(11)),
-        child: const Row(
+            color: itextColor == Colors.black
+                ? Colors.black.withOpacity(0.7)
+                : iwhite70,
+            borderRadius: BorderRadius.circular(11)),
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
@@ -31,12 +34,16 @@ class SeeAll extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: fwBanner,
-                color: Colors.black,
+                color: itextColor == Colors.black
+                    ? Colors.white.withOpacity(0.8)
+                    : Colors.black.withOpacity(0.8),
               ),
             ),
             Icon(
               Icons.window,
-              color: Colors.black,
+              color: itextColor == Colors.black
+                  ? Colors.white.withOpacity(0.8)
+                  : Colors.black.withOpacity(0.8),
               size: 20,
             )
           ],

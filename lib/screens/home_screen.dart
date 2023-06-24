@@ -89,9 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.0,
         actions: [
           ServerIndicator(isServerUp: isServerUp),
-          SizedBox(width: 5),
-          IButton(),
-          SizedBox(width: 10)
+          const SizedBox(width: 5),
+          const IButton(),
+          const SizedBox(width: 10)
         ],
       ),
       body: Stack(
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+                  image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
             ),
           ),
           Column(
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "What's New to Learn",
                   style: TextStyle(
                       fontSize: fsBanner,
-                      color: Colors.white,
+                      color: itextColor,
                       fontWeight: fwBanner),
                 ),
               ),
@@ -137,16 +137,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
                             padding: EdgeInsets.all(16),
-                            child: const Text(
+                            child: Text(
                               "Apps for You",
                               style: TextStyle(
                                 fontSize: fsBanner,
-                                color: Colors.white,
+                                color: itextColor,
                                 fontWeight: fwBanner,
                               ),
                             ),
@@ -155,10 +155,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       appData.isEmpty
-                          ? CardSkeleton(itemCount: 5)
+                          ? const CardSkeleton(itemCount: 5)
                           : GridView.builder(
                               shrinkWrap: true,
-                              physics: BouncingScrollPhysics(),
+                              physics: const BouncingScrollPhysics(),
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,

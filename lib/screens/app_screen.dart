@@ -89,7 +89,7 @@ class _AppScreenState extends State<AppScreen> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+                  image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
             ),
           ),
           Padding(

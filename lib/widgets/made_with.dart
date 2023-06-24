@@ -10,9 +10,11 @@ class MadeWith extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 50, bottom: 60),
       child: Text.rich(
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 21,
-          color: iwhite70,
+          color: itextColor == Colors.black
+              ? Colors.black.withOpacity(0.7)
+              : iwhite70,
           fontFamily: 'Pacifico',
         ),
         TextSpan(
@@ -26,9 +28,9 @@ class MadeWith extends StatelessWidget {
                 width: 20,
               ),
             ),
+            const TextSpan(text: '  by  '),
             const TextSpan(
-              text: '  by  Sahil Italiya',
-            ),
+                text: 'Sahil Italiya', style: TextStyle(fontSize: 22)),
           ],
         ),
       ),

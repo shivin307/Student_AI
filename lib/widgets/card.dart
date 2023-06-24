@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/widgets/frosted_glass.dart';
 
 import '../model/app_data_model.dart';
@@ -30,16 +31,19 @@ class CardWidget extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Color(int.parse(data.color)).withOpacity(0.8),
+            color: Color(int.parse(data.color)).withOpacity(0.7),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 17),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
+                    color: itextColor == Colors.black
+                        ? Colors.black.withOpacity(0.7)
+                        : Colors.white.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Padding(
@@ -49,15 +53,15 @@ class CardWidget extends StatelessWidget {
                         int.parse(data.icon),
                         fontFamily: 'MaterialIcons',
                       ),
-                      // color: Colors.white,
+                      color: itextColor == Colors.black
+                          ? Colors.white.withOpacity(0.7)
+                          : Colors.black.withOpacity(0.7),
                       size: 30,
                     ),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 5),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -68,7 +72,7 @@ class CardWidget extends StatelessWidget {
                     Text(
                       data.title,
                       style: TextStyle(
-                        color: Colors.black.withOpacity(0.9),
+                        color: Colors.white.withOpacity(0.8),
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -79,7 +83,7 @@ class CardWidget extends StatelessWidget {
                     Text(
                       data.disc,
                       style: TextStyle(
-                        color: Colors.black.withOpacity(0.8),
+                        color: Colors.white.withOpacity(0.6),
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),

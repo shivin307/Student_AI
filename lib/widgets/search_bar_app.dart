@@ -65,7 +65,7 @@ class _appSearchBarState extends State<appSearchBar> {
             },
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15), color: iwhite),
+                  borderRadius: BorderRadius.circular(15), color: iwhite0_6),
               width: 38,
               height: 38,
               child: Padding(

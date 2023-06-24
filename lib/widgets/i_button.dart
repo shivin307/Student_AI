@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../data/constants.dart';
 import 'info_card.dart';
 
 class IButton extends StatelessWidget {
+
   const IButton({super.key});
 
   @override
@@ -13,9 +15,9 @@ class IButton extends StatelessWidget {
           builder: (BuildContext context) {
             return const infoCard();
           }),
-      child: const SizedBox(
+      child: SizedBox(
         width: 35,
-        child: Icon(Icons.info, color: Colors.white70),
+        child: Icon(Icons.info, color: itextColor == Colors.black ? Colors.black.withOpacity(0.7) : Colors.white70),
       ),
     );
   }

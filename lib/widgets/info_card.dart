@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgpt/data/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: camel_case_types
@@ -19,7 +20,7 @@ class infoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.white,
+      backgroundColor: itextColor,
       title: ClipRRect(
         borderRadius: BorderRadius.circular(300),
         child: Image.asset(
@@ -33,24 +34,24 @@ class infoCard extends StatelessWidget {
         height: 100,
         child: Column(
           children: [
-            const Text(
+            Text(
               'Italiya & Co.',
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontWeight: FontWeight.w500,
-                color: Colors.black,
-                fontSize: 18,
+                color: itextColor == Colors.black ? Colors.white : Colors.black,
+                fontSize: 20,
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            const Text(
+            Text(
               ' © All Rights Reserved',
               style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: itextColor == Colors.black ? Colors.white : Colors.black),
             ),
             const SizedBox(
               height: 15,
@@ -60,10 +61,10 @@ class infoCard extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () => urlLauncher('https://github.com/shivin307'),
-                  child: const Image(
+                  child: Image(
                     height: 30,
                     image: AssetImage('assets/github.png'),
-                    color: Colors.black,
+                    color: itextColor == Colors.black ? Colors.white : Colors.black,
                   ),
                 ),
                 const SizedBox(width: 30),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/widgets/feedback_card.dart';
 import 'package:sgpt/widgets/rate_card.dart';
 import 'package:sgpt/widgets/share_card.dart';
@@ -16,7 +17,7 @@ class SupportUs extends StatelessWidget {
           child: Text(
             "Support Us",
             style: TextStyle(
-              color: Colors.white,
+              color: itextColor,
               fontSize: 25,
               fontWeight: FontWeight.w600,
             ),

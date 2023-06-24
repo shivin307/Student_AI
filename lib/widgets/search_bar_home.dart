@@ -32,8 +32,13 @@ class _searchBarState extends State<searchBar> {
           padding: const EdgeInsets.only(left: 15, right: 5),
           decoration: BoxDecoration(
               border: Border.all(
-                  color: widget.chat ? Colors.black87 : iwhite70, width: 3),
-              color: Colors.black12,
+                color: itextColor == Colors.black || widget.chat
+                    ? Colors.black87
+                    : iwhite70,
+                width: 3,
+              ),
+              color:
+                  itextColor == Colors.black ? Colors.white12 : Colors.black12,
               borderRadius: BorderRadius.circular(21)),
           child: Row(
             children: [
@@ -48,17 +53,21 @@ class _searchBarState extends State<searchBar> {
                           toastLength: Toast.LENGTH_SHORT,
                           gravity: ToastGravity.BOTTOM,
                           timeInSecForIosWeb: 1,
-                          backgroundColor: iwhite,
+                          backgroundColor: iwhite0_6,
                           textColor: Colors.black,
                           fontSize: 16.0);
                     } else {
                       widget.onTap();
                     }
                   },
-                  cursorColor: widget.chat ? Colors.black : iwhite70,
+                  cursorColor: itextColor == Colors.black || widget.chat
+                      ? Colors.black
+                      : iwhite70,
                   style: TextStyle(
                     fontSize: 20,
-                    color: widget.chat ? Colors.black : Colors.white,
+                    color: itextColor == Colors.black || widget.chat
+                        ? Colors.black
+                        : Colors.white,
                     decoration: TextDecoration.none,
                   ),
                   decoration: InputDecoration(
@@ -67,7 +76,9 @@ class _searchBarState extends State<searchBar> {
                     border: InputBorder.none,
                     hintText: "Ask anything to AI",
                     hintStyle: TextStyle(
-                        color: widget.chat ? Colors.black54 : Colors.white60),
+                        color: itextColor == Colors.black || widget.chat
+                            ? Colors.black54
+                            : Colors.white60),
                   ),
                   controller: widget.searchController,
                 ),
@@ -81,7 +92,7 @@ class _searchBarState extends State<searchBar> {
                         toastLength: Toast.LENGTH_SHORT,
                         gravity: ToastGravity.BOTTOM,
                         timeInSecForIosWeb: 1,
-                        backgroundColor: iwhite,
+                        backgroundColor: iwhite0_6,
                         textColor: Colors.black,
                         fontSize: 16.0);
                   } else {
@@ -91,7 +102,7 @@ class _searchBarState extends State<searchBar> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: widget.chat
+                    color: itextColor == Colors.black || widget.chat
                         ? Colors.black.withOpacity(0.8)
                         : Colors.white.withOpacity(0.8),
                   ),
@@ -100,7 +111,7 @@ class _searchBarState extends State<searchBar> {
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: SvgPicture.asset(
-                      widget.chat
+                      itextColor == Colors.black || widget.chat
                           ? 'assets/openai_white.svg'
                           : 'assets/openai_black.svg',
                     ),

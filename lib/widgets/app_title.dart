@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sgpt/data/constants.dart';
 
 class AppTitle extends StatelessWidget {
   const AppTitle({super.key});
@@ -11,8 +12,8 @@ class AppTitle extends StatelessWidget {
       children: [
         Container(
           width: 35,
-          child: SvgPicture.asset(
-            'assets/openai_white.svg',
+          child: SvgPicture.asset( itextColor == Colors.white ?
+            'assets/openai_white.svg': 'assets/openai_black.svg',
           ),
         ),
         SizedBox(
@@ -21,7 +22,7 @@ class AppTitle extends StatelessWidget {
         Text(
           'Student AI',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w600, fontSize: 30),
+              color: itextColor, fontWeight: FontWeight.w600, fontSize: 30),
         )
       ],
     );

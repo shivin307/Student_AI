@@ -24,7 +24,7 @@ class SupportCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(21),
-            color: color.withOpacity(0.6),
+            color: color.withOpacity(0.5),
           ),
           height: 140,
           child: Row(
@@ -47,13 +47,14 @@ class SupportCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.06,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white70,
                       ),
                     ),
                     Text(
                       disc,
                       style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.white70,
+                        color: Colors.white54,
                       ),
                     )
                   ],

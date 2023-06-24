@@ -9,8 +9,9 @@ const Map<String, TextInputType> typeMap = {
 const double cardAspectRatio = 0.85;
 const double fsBanner = 25.0;
 
+const itextColor = Colors.white;
 const ibg = Colors.white12;
-final iwhite = Colors.white.withOpacity(0.6);
+final iwhite0_6 = Colors.white.withOpacity(0.6);
 const itrans = Colors.transparent;
 const iradium = Color.fromRGBO(173, 245, 40, 1);
 const iwhite70 = Colors.white70;
