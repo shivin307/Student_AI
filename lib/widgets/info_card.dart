@@ -60,7 +60,7 @@ class infoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: () => urlLauncher('https://github.com/shivin307'),
+                  onTap: () => urlLauncher('https://github.com/shivin307/Student_AI'),
                   child: Image(
                     height: 30,
                     image: AssetImage('assets/github.png'),
