@@ -14,7 +14,7 @@ class userMessage extends StatelessWidget {
         Flexible(
           child: Container(
             decoration: BoxDecoration(
-              color: const Color(0xffdcf8c6).withOpacity(0.8),
+              color: const Color(0xffdcf8c6).withOpacity(0.85),
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(20),
                 bottomLeft: Radius.circular(20),

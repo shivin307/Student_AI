@@ -22,7 +22,7 @@ class CardWidget extends StatelessWidget {
         isScrollControlled: true,
         // shape: ,
         backgroundColor: Colors.black.withOpacity(0.2),
-        showDragHandle: true,
+        showDragHandle: false,
         useSafeArea: true,
         context: context,
         builder: (context) => FrostedGlass(child: pageRoute),
@@ -42,8 +42,8 @@ class CardWidget extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: itextColor == Colors.black
-                        ? Colors.black.withOpacity(0.7)
-                        : Colors.white.withOpacity(0.7),
+                        ? Colors.black.withOpacity(0.8)
+                        : Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Padding(

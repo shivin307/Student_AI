@@ -24,7 +24,7 @@ class SupportCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(21),
-            color: color.withOpacity(0.5),
+            color: color.withOpacity(0.6),
           ),
           height: 140,
           child: Row(

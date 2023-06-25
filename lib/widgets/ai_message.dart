@@ -28,14 +28,14 @@ class aiMessage extends StatelessWidget {
         ),
         Flexible(
           child: Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               right: 45,
               top: 5,
               bottom: 5,
             ),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              borderRadius: BorderRadius.only(
+              color: Colors.white.withOpacity(0.85),
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(20),
                 bottomRight: Radius.circular(20),
                 topLeft: Radius.circular(20),

@@ -106,14 +106,14 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(
                     left: 16.0, right: 16.0, bottom: 16.0, top: 100.0),
                 child: Text(
                   "What's New to Learn",
                   style: TextStyle(
                       fontSize: fsBanner,
-                      color: itextColor,
+                      color: itextColor.withOpacity(0.9),
                       fontWeight: fwBanner),
                 ),
               ),
@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      const Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
@@ -146,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               "Apps for You",
                               style: TextStyle(
                                 fontSize: fsBanner,
-                                color: itextColor,
+                                color: itextColor.withOpacity(0.9),
                                 fontWeight: fwBanner,
                               ),
                             ),

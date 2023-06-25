@@ -21,15 +21,12 @@ class formTextField extends StatelessWidget {
             const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         hintText: field.value['placeholder'],
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(21),
-          borderSide: const BorderSide(
-            width: 3,
-          ),
+          borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(
-            color: Colors.green,
+          borderRadius: BorderRadius.circular(21),
+          borderSide: BorderSide(
+            color: iradium.withOpacity(0.8),
             width: 3,
           ),
         ),

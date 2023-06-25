@@ -25,9 +25,12 @@ class FormSkeleton extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(
-            title,
-            style: const TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          Padding(
+            padding: EdgeInsets.only(top: 40, bottom: 10),
+            child: Text(
+              title,
+              style: const TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
           for (var i = 0; i < 4; i++)
             Padding(
@@ -48,7 +51,7 @@ class FormSkeleton extends StatelessWidget {
                   Container(
                     height: 53,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(10),
                       color: const Color(0xFF9A9797),
                     ),
                   )

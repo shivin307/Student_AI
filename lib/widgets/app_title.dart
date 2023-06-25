@@ -14,6 +14,7 @@ class AppTitle extends StatelessWidget {
           width: 35,
           child: SvgPicture.asset( itextColor == Colors.white ?
             'assets/openai_white.svg': 'assets/openai_black.svg',
+            color: itextColor.withOpacity(0.8),
           ),
         ),
         SizedBox(
@@ -22,7 +23,7 @@ class AppTitle extends StatelessWidget {
         Text(
           'Student AI',
           style: TextStyle(
-              color: itextColor, fontWeight: FontWeight.w600, fontSize: 30),
+              color: itextColor.withOpacity(0.8), fontWeight: FontWeight.w600, fontSize: 30),
         )
       ],
     );

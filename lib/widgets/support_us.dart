@@ -12,12 +12,12 @@ class SupportUs extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.all(16.0),
           child: Text(
             "Support Us",
             style: TextStyle(
-              color: itextColor,
+              color: itextColor.withOpacity(0.9),
               fontSize: 25,
               fontWeight: FontWeight.w600,
             ),

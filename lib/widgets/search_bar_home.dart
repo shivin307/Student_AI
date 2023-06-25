@@ -32,10 +32,10 @@ class _searchBarState extends State<searchBar> {
           padding: const EdgeInsets.only(left: 15, right: 5),
           decoration: BoxDecoration(
               border: Border.all(
-                color: itextColor == Colors.black || widget.chat
+                color: itextColor == Colors.black && widget.chat
                     ? Colors.black87
                     : iwhite70,
-                width: 3,
+                width: 2.5,
               ),
               color:
                   itextColor == Colors.black ? Colors.white12 : Colors.black12,
@@ -60,12 +60,12 @@ class _searchBarState extends State<searchBar> {
                       widget.onTap();
                     }
                   },
-                  cursorColor: itextColor == Colors.black || widget.chat
+                  cursorColor: itextColor == Colors.black && widget.chat
                       ? Colors.black
                       : iwhite70,
                   style: TextStyle(
                     fontSize: 20,
-                    color: itextColor == Colors.black || widget.chat
+                    color: itextColor == Colors.black && widget.chat
                         ? Colors.black
                         : Colors.white,
                     decoration: TextDecoration.none,
@@ -76,7 +76,7 @@ class _searchBarState extends State<searchBar> {
                     border: InputBorder.none,
                     hintText: "Ask anything to AI",
                     hintStyle: TextStyle(
-                        color: itextColor == Colors.black || widget.chat
+                        color: itextColor == Colors.black && widget.chat
                             ? Colors.black54
                             : Colors.white60),
                   ),
@@ -102,7 +102,7 @@ class _searchBarState extends State<searchBar> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: itextColor == Colors.black || widget.chat
+                    color: itextColor == Colors.black && widget.chat
                         ? Colors.black.withOpacity(0.8)
                         : Colors.white.withOpacity(0.8),
                   ),
@@ -111,7 +111,7 @@ class _searchBarState extends State<searchBar> {
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: SvgPicture.asset(
-                      itextColor == Colors.black || widget.chat
+                      itextColor == Colors.black && widget.chat
                           ? 'assets/openai_white.svg'
                           : 'assets/openai_black.svg',
                     ),

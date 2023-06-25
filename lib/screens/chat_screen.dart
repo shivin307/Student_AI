@@ -78,7 +78,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Stack(
       children: [
         Image.asset(
-          'assets/images/chat_background.png',
+          'assets/images/bg.jpg',
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
@@ -91,22 +91,28 @@ class _ChatScreenState extends State<ChatScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(Icons.arrow_back_ios_new_rounded),
+              icon: Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: itextColor.withOpacity(0.8),
+              ),
             ),
             foregroundColor: Colors.black,
-            title: const Text(
+            title: Text(
               'Chat',
+              style: TextStyle(color: itextColor.withOpacity(0.8)),
             ),
             backgroundColor: Colors.transparent,
             actions: [
               IconButton(
-                icon: const Icon(Icons.delete_forever),
+                icon: Icon(Icons.delete_forever,
+                    color: itextColor.withOpacity(0.8)),
                 onPressed: () {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return FrostedGlass(
                         child: AlertDialog(
+                          backgroundColor: itextColor.withOpacity(0.8),
                           insetPadding: const EdgeInsets.all(16),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -186,9 +192,9 @@ class _ChatScreenState extends State<ChatScreen> {
                         ),
                         Container(
                           margin: const EdgeInsets.symmetric(vertical: 10),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.85),
+                            borderRadius: const BorderRadius.only(
                               topRight: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               topLeft: Radius.circular(20),
@@ -197,21 +203,19 @@ class _ChatScreenState extends State<ChatScreen> {
                           child: Column(
                             children: [
                               Container(
+                                margin: const EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 14),
                                 child: const SpinKitThreeInOut(
                                   color: Colors.black54,
                                   size: 20,
                                 ),
-                                margin: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 14),
                               ),
                             ],
                           ),
                         )
                       ],
                     )
-                  : const SizedBox(
-                      height: 10,
-                    ),
+                  : const SizedBox(height: 8),
               searchBar(
                 searchController: newChatController,
                 onTap: () {
@@ -223,7 +227,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 chat: true,
               ),
               const SizedBox(
-                height: 15,
+                height: 18,
               )
             ],
           ),
