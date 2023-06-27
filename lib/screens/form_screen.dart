@@ -98,7 +98,7 @@ class _formScreenState extends State<formScreen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 40, bottom: 10),
+                      padding: const EdgeInsets.only(top: 40, bottom: 10),
                       child: Text(
                         widget.title,
                         style: const TextStyle(
@@ -152,7 +152,7 @@ class _formScreenState extends State<formScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20)
+                    const SizedBox(height: 20)
                   ],
                 ),
               ),
