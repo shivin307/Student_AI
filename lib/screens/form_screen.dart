@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/data/secrets.dart';
-import 'package:sgpt/screens/quiz_screen.dart';
 import 'package:sgpt/widgets/form_skeleton.dart';
 import 'package:sgpt/widgets/form_text_field.dart';
 
 import '../data/globals.dart';
 import '../service/api_service.dart';
 import 'chat_screen.dart';
+import 'mindmap_screen.dart';
 
 class formScreen extends StatefulWidget {
   final String id;
@@ -75,8 +75,10 @@ class _formScreenState extends State<formScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => widget.id == 'mcq-type-quiz'
-                ? Quiz(queryController: submittedPrompt.toString())
+            builder: (BuildContext context) => widget.id == 'mindmap-generator'
+                ? MindMap(
+                    data: submittedPrompt.toString(),
+                  )
                 : ChatScreen(
                     chatController: submittedPrompt.toString(),
                     isFormRoute: true),
@@ -98,7 +100,7 @@ class _formScreenState extends State<formScreen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 40, bottom: 10),
+                      padding: const EdgeInsets.only(top: 40, bottom: 10),
                       child: Text(
                         widget.title,
                         style: const TextStyle(
@@ -152,7 +154,7 @@ class _formScreenState extends State<formScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20)
+                    const SizedBox(height: 20)
                   ],
                 ),
               ),
