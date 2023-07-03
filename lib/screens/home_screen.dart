@@ -12,13 +12,14 @@ import '../widgets/app_title.dart';
 import '../widgets/card.dart';
 import '../widgets/card_skeleton.dart';
 import '../widgets/i_button.dart';
-import '../widgets/made_with.dart';
 import '../widgets/search_bar_home.dart';
 import '../widgets/see_all_button.dart';
 import '../widgets/server_indicator.dart';
 import '../widgets/support_us.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }

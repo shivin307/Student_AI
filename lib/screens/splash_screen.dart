@@ -18,12 +18,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       () {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(),
+            builder: (context) => const HomeScreen(),
           ),
         );
       },
@@ -39,22 +39,20 @@ class _SplashScreenState extends State<SplashScreen> {
           Flexible(
             flex: 5,
             child: AnimatedSplashScreen(
-              animationDuration: Duration(seconds: 1),
+              animationDuration: const Duration(seconds: 1),
               backgroundColor: Colors.black87,
               splashTransition: SplashTransition.fadeTransition,
-              splash: Container(
-                child: Center(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(23),
-                    child: SvgPicture.asset(
-                      'assets/openai_white.svg',
-                      height: 70,
-                      width: 100,
-                    ),
+              splash: Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(23),
+                  child: SvgPicture.asset(
+                    'assets/openai_white.svg',
+                    height: 70,
+                    width: 100,
                   ),
                 ),
               ),
-              nextScreen: HomeScreen(),
+              nextScreen: const HomeScreen(),
             ),
           ),
           // Flexible(

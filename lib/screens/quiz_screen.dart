@@ -80,69 +80,67 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: FrostedGlass(
-        child: Scaffold(
-          backgroundColor: Colors.black.withOpacity(0.6),
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            foregroundColor: Colors.white,
-            title: const Text('MCQ Quiz'),
-          ),
-          body: _isTyping
-              ? const Center(
+    return FrostedGlass(
+      child: Scaffold(
+        backgroundColor: Colors.black.withOpacity(0.6),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.white,
+          title: const Text('MCQ Quiz'),
+        ),
+        body: _isTyping
+            ? const Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Generating Quiz...',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 80.0),
+                      child: LinearProgressIndicator(
+                        minHeight: 3,
+                        color: Color.fromRGBO(173, 245, 40, 1),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Generating Quiz...',
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 16, horizontal: 80.0),
-                        child: LinearProgressIndicator(
-                          minHeight: 3,
-                          color: Color.fromRGBO(173, 245, 40, 1),
+                      QuestionListBuilder(
+                          questionJSON: questionJSON,
+                          selectedOptions: selectedOptions,
+                          isSubmitted: _isSubmitted),
+                      MaterialButton(
+                        onPressed: _submitQuiz,
+                        color: iwhite70,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
-                      ),
-                    ],
-                  ),
-                )
-              : SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      children: [
-                        QuestionListBuilder(
-                            questionJSON: questionJSON,
-                            selectedOptions: selectedOptions,
-                            isSubmitted: _isSubmitted),
-                        MaterialButton(
-                          onPressed: _submitQuiz,
-                          color: iwhite70,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: Text(
-                              'Submit',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                              ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Text(
+                            'Submit',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 25,
-                        ),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                    ],
                   ),
                 ),
-        ),
+              ),
       ),
     );
   }

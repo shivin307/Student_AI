@@ -20,7 +20,7 @@ class _MindMapState extends State<MindMap> {
   String html = '';
 
   Future<void> fetchData(String qry) async {
-    final String key = apiKey!;
+    const String key = apiKey;
     String fetchRes = await ApiService.fetchApi(key, qry);
 
     setState(() {

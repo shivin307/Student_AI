@@ -63,7 +63,7 @@ class infoCard extends StatelessWidget {
                   onTap: () => urlLauncher('https://github.com/shivin307/Student_AI'),
                   child: Image(
                     height: 30,
-                    image: AssetImage('assets/github.png'),
+                    image: const AssetImage('assets/github.png'),
                     color: itextColor == Colors.black ? Colors.white : Colors.black,
                   ),
                 ),

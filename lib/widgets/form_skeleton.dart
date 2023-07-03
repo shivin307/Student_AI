@@ -26,7 +26,7 @@ class FormSkeleton extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 40, bottom: 10),
+            padding: const EdgeInsets.only(top: 40, bottom: 10),
             child: Text(
               title,
               style: const TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
