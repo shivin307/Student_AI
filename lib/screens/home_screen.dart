@@ -12,13 +12,14 @@ import '../widgets/app_title.dart';
 import '../widgets/card.dart';
 import '../widgets/card_skeleton.dart';
 import '../widgets/i_button.dart';
-import '../widgets/made_with.dart';
 import '../widgets/search_bar_home.dart';
 import '../widgets/see_all_button.dart';
 import '../widgets/server_indicator.dart';
 import '../widgets/support_us.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -107,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                     left: 16.0, right: 16.0, bottom: 16.0, top: 100.0),
                 child: Text(
                   "What's New to Learn",
@@ -141,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(16),
+                            padding: const EdgeInsets.all(16),
                             child: Text(
                               "Apps for You",
                               style: TextStyle(
@@ -151,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
-                          SeeAll()
+                          const SeeAll()
                         ],
                       ),
                       appData.isEmpty
@@ -182,7 +183,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 20,
                       ),
                       const SupportUs(),
-                      const MadeWith(),
+                      const SizedBox(height: 145,)
+                      // const MadeWith(),
                     ],
                   ),
                 ),

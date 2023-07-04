@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:sgpt/data/constants.dart';
 
+// ignore: camel_case_types
 class appSearchBar extends StatefulWidget {
   final TextEditingController searchController;
   final VoidCallback onTap;
 
-  appSearchBar({Key? key, required this.onTap, required this.searchController})
+  const appSearchBar({Key? key, required this.onTap, required this.searchController})
       : super(key: key);
 
   @override
   State<appSearchBar> createState() => _appSearchBarState();
 }
 
+// ignore: camel_case_types
 class _appSearchBarState extends State<appSearchBar> {
   bool showIconSearch = false;
 

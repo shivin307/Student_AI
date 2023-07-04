@@ -55,7 +55,9 @@ class ApiService {
       final message = (choice[0]['message'])['content'];
 
       resData = message;
-      print('responceAPI: $resData');
+      if (kDebugMode) {
+        print('responceAPI: $resData');
+      }
       return resData;
     } catch (e) {
       throw Exception(e.toString());
@@ -68,8 +70,12 @@ class ApiService {
 
       final res = await http.get(Uri.parse(url));
 
-      print(res.statusCode);
-      print('Chimera, $apiKey');
+      if (kDebugMode) {
+        print(res.statusCode);
+      }
+      if (kDebugMode) {
+        print('Chimera, $apiKey');
+      }
       return res.statusCode == 200;
     } catch (e) {
       if (kDebugMode) {

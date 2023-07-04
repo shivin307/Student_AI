@@ -5,12 +5,13 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/widgets/frosted_glass.dart';
 
+// ignore: camel_case_types
 class searchBar extends StatefulWidget {
   final TextEditingController searchController;
   final VoidCallback onTap;
   final bool chat;
 
-  searchBar(
+  const searchBar(
       {Key? key,
       required this.onTap,
       required this.searchController,
@@ -21,6 +22,7 @@ class searchBar extends StatefulWidget {
   State<searchBar> createState() => _searchBarState();
 }
 
+// ignore: camel_case_types
 class _searchBarState extends State<searchBar> {
   @override
   Widget build(BuildContext context) {

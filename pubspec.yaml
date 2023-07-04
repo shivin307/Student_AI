@@ -42,6 +42,7 @@ dependencies:
   shimmer: ^3.0.0
   share_plus: ^7.0.2
   wiredash: ^1.7.0
+  webview_flutter_plus: ^0.3.0+2
   flutter:
     sdk: flutter
 

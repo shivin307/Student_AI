@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/constants.dart';
 
 class CardSkeleton extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final itemCount;
   const CardSkeleton({super.key,required this.itemCount});
 

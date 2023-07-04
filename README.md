@@ -45,7 +45,7 @@ Once the app is running, you can start chatting with StudentAI by typing in your
 Before starting to use the app, do not forget to add your API key in  `secrets.dart` file.
 
 1. You can get using free key Providers from GitHub repo/discord server.
-   ex. [ChimeraGPT](https://discord.com/channels/1109383423061147680/1109409131078619207)
+   ex. [ChimeraGPT](https://discord.gg/pCarpb3Qxc)
 2. Join the above discord and send the command `/get key` to get your API key
 
 ### Data

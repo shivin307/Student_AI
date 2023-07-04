@@ -103,41 +103,39 @@ class _AppScreenState extends State<AppScreen> {
                   searchController: appScreenController,
                 ),
                 const SizedBox(height: 20),
-                Container(
-                  child: Expanded(
-                    child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      child: Column(
-                        children: [
-                          allCards.isEmpty
-                              ? const CardSkeleton(itemCount: 6)
-                              : GridView.builder(
-                                  shrinkWrap: true,
-                                  physics: const BouncingScrollPhysics(),
-                                  gridDelegate:
-                                      const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2,
-                                    childAspectRatio: 0.85,
-                                    crossAxisSpacing: 10,
-                                    mainAxisSpacing: 10,
-                                  ),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10),
-                                  itemCount: allCards.length,
-                                  itemBuilder: (context, index) {
-                                    final data = allCards[index];
-                                    return CardWidget(
-                                      data: data,
-                                      pageRoute: formScreen(
-                                        id: data.id,
-                                        title: data.title,
-                                      ),
-                                    );
-                                  },
+                Expanded(
+                  child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        allCards.isEmpty
+                            ? const CardSkeleton(itemCount: 6)
+                            : GridView.builder(
+                                shrinkWrap: true,
+                                physics: const BouncingScrollPhysics(),
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  childAspectRatio: 0.85,
+                                  crossAxisSpacing: 10,
+                                  mainAxisSpacing: 10,
                                 ),
-                          const SizedBox(height: 20)
-                        ],
-                      ),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10),
+                                itemCount: allCards.length,
+                                itemBuilder: (context, index) {
+                                  final data = allCards[index];
+                                  return CardWidget(
+                                    data: data,
+                                    pageRoute: formScreen(
+                                      id: data.id,
+                                      title: data.title,
+                                    ),
+                                  );
+                                },
+                              ),
+                        const SizedBox(height: 20)
+                      ],
                     ),
                   ),
                 ),

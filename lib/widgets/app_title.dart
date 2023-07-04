@@ -10,20 +10,23 @@ class AppTitle extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(
+        SizedBox(
           width: 35,
-          child: SvgPicture.asset( itextColor == Colors.white ?
-            'assets/openai_white.svg': 'assets/openai_black.svg',
+          child: SvgPicture.asset(
+            itextColor == Colors.white
+                ? 'assets/openai_white.svg'
+                : 'assets/openai_black.svg',
+            // ignore: deprecated_member_use
             color: itextColor.withOpacity(0.8),
           ),
         ),
-        SizedBox(
-          width: 10,
-        ),
+        const SizedBox(width: 10),
         Text(
           'Student AI',
           style: TextStyle(
-              color: itextColor.withOpacity(0.8), fontWeight: FontWeight.w600, fontSize: 30),
+              color: itextColor.withOpacity(0.8),
+              fontWeight: FontWeight.w600,
+              fontSize: 30),
         )
       ],
     );

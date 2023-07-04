@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/constants.dart';
 
+// ignore: camel_case_types
 class formTextField extends StatelessWidget {
   final MapEntry<String, dynamic> field;
   final Map<String, TextEditingController> formFieldControllers;
