@@ -64,7 +64,7 @@ class _formScreenState extends State<formScreen> {
         submittedPrompt[key] = textFieldMessage.text;
       });
 
-      if (isAPIValidated && apiKey == false) {
+      if (isAPIValidated && apiKey == '') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Enter a valid API Key'),
