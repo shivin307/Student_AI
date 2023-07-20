@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sgpt/data/constants.dart';
 import 'package:sgpt/data/secrets.dart';
+import 'package:sgpt/screens/quiz_screen.dart';
 import 'package:sgpt/widgets/form_skeleton.dart';
 import 'package:sgpt/widgets/form_text_field.dart';
 
@@ -80,18 +81,41 @@ class _formScreenState extends State<formScreen> {
           ),
         );
       } else {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => widget.id == 'mindmap-generator'
-                ? MindMap(
-                    data: submittedPrompt.toString(),
-                  )
-                : ChatScreen(
-                    chatController: submittedPrompt.toString(),
-                    isFormRoute: true),
-          ),
-        );
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) {
+          if (widget.id == 'mcq-type-quiz') {
+            return Quiz(queryController: submittedPrompt.toString());
+          } else if (widget.id == 'mindmap-generator') {
+            return MindMap(data: submittedPrompt.toString());
+          } else {
+            return ChatScreen(
+              chatController: submittedPrompt.toString(),
+              isFormRoute: true,
+            );
+          }
+        }));
+//         Navigator.push(
+//           context,
+//           MaterialPageRoute(
+//             builder: (BuildContext context) {
+//               if (widget.id == 'mindmap-generator') {
+//                 return MindMap(
+//                   data: submittedPrompt.toString(),
+//                 );
+//               } else if (widget.id == 'mcq-type-quiz'){
+//                 return Quiz(
+//                   chatController: submittedPrompt.toString(),
+//                   isFormRoute: true,
+//                 );
+//               }
+//               else{
+//                 if()
+//
+//               }
+//             },
+//           )
+// ,
+//         );
       }
     }
   }
