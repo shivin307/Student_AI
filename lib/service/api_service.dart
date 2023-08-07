@@ -60,7 +60,9 @@ class ApiService {
       }
       return resData;
     } catch (e) {
-      throw Exception(e.toString());
+      // throw Exception(e.toString());
+      print('API Error: $e');
+      return "Something went wrong!! Please, try again later.";
     }
   }
 
