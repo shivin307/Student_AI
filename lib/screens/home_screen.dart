@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
+
     fetchApps(5);
 
     ApiService.serverStatus().then((status) {

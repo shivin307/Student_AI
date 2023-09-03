@@ -12,10 +12,7 @@ class AppTitle extends StatelessWidget {
       children: [
         SizedBox(
           width: 35,
-          child: SvgPicture.asset(
-            itextColor == Colors.white
-                ? 'assets/openai_white.svg'
-                : 'assets/openai_black.svg',
+          child: SvgPicture.asset('assets/logo.svg',
             // ignore: deprecated_member_use
             color: itextColor.withOpacity(0.8),
           ),

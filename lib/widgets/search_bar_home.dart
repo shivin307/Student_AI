@@ -114,7 +114,7 @@ class _searchBarState extends State<searchBar> {
                     padding: const EdgeInsets.all(4.0),
                     child: SvgPicture.asset(
                       itextColor == Colors.black && widget.chat
-                          ? 'assets/openai_white.svg'
+                          ? 'assets/logo.svg'
                           : 'assets/openai_black.svg',
                     ),
                   ),

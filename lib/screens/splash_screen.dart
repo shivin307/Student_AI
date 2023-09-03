@@ -40,13 +40,13 @@ class _SplashScreenState extends State<SplashScreen> {
             flex: 5,
             child: AnimatedSplashScreen(
               animationDuration: const Duration(seconds: 1),
-              backgroundColor: Colors.black87,
+              backgroundColor: Colors.white70,
               splashTransition: SplashTransition.fadeTransition,
               splash: Center(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(23),
                   child: SvgPicture.asset(
-                    'assets/openai_white.svg',
+                    'assets/logo.svg',
                     height: 70,
                     width: 100,
                   ),

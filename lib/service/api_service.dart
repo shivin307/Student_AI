@@ -3,72 +3,48 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-import '../data/globals.dart';
 import '../data/secrets.dart';
 import '../model/app_data_model.dart';
 
 class ApiService {
   static Future<String> fetchApi(String apiKey, String content) async {
     try {
-      String url = 'https://chimeragpt.adventblocks.cc/v1/chat/completions';
-      // String url = 'https://api.hypere.app/v1/chat/completions';
+      final url =
+          'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=$apiKey';
 
-      final Map<String, String> headers = {
-        'authorization': 'Bearer $apiKey'
-            '',
-        'Content-Type': 'application/json'
-      };
       final Map<String, dynamic> data = {
-        'model': 'gpt-3.5-turbo',
-        'messages': [
-          {
-            "role": "system",
-            "content": formatter,
-          },
-          {
-            'role': 'user',
-            'content': content,
-          }
-        ],
-        'max_tokens': 2048
+        'prompt': {
+          'text': content,
+        }
       };
 
-      final res = await http.post(
+      final response = await http.post(
         Uri.parse(url),
-        headers: headers,
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: jsonEncode(data),
       );
 
-      // print(res.body);
+      Map<String, dynamic> result = jsonDecode(response.body);
 
-      Map<String, dynamic> result = jsonDecode(res.body);
-
-      String resData = '';
-
-      // result['choices'].forEach((value) {
-      //   String content = value['message']['content'];
-      //   resData = content;
-      // });
-
-      final choice = result['choices'];
-
-      final message = (choice[0]['message'])['content'];
-
-      resData = message;
+      String resData = result['candidates'][0]['output'];
       if (kDebugMode) {
-        print('responceAPI: $resData');
+        print('responseAPI: $resData');
       }
       return resData;
     } catch (e) {
       // throw Exception(e.toString());
-      print('API Error: $e');
+      if (kDebugMode) {
+        print('API Error: $e');
+      }
       return "Something went wrong!! Please, try again later.";
     }
   }
 
   static Future<bool> serverStatus() async {
     try {
-      String url = 'https://chimeragpt.adventblocks.cc/';
+      String url = 'https://api.pawan.krd/pai-001-light-beta/v1';
 
       final res = await http.get(Uri.parse(url));
 
