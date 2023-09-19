@@ -11,7 +11,7 @@ class searchBar extends StatefulWidget {
   final VoidCallback onTap;
   final bool chat;
 
-  const searchBar(
+  const   searchBar(
       {Key? key,
       required this.onTap,
       required this.searchController,
