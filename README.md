@@ -1,6 +1,6 @@
 ## StudentAI
 
-StudentAI is an AI chatbot app designed to enhance students' learning experiences through personalized interactions. The app uses GoogleAI (like OpenAI)'s API to provide students with comprehensive and informative answers to their questions.
+StudentAI is an AI chatbot app designed to enhance students' learning experiences through personalized interactions. The app uses Google AI (like OpenAI)'s API to provide students with comprehensive and informative answers to their questions.
 
 ### Features
 
