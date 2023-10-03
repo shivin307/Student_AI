@@ -1,6 +1,6 @@
 ## StudentAI
 
-StudentAI is an AI chatbot app designed to enhance students' learning experiences through personalized interactions. The app uses ChimeraGPT(like OpenAI)'s API to provide students with comprehensive and informative answers to their questions.
+StudentAI is an AI chatbot app designed to enhance students' learning experiences through personalized interactions. The app uses GoogleAI (like OpenAI)'s API to provide students with comprehensive and informative answers to their questions.
 
 ### Features
 
@@ -44,9 +44,8 @@ Once the app is running, you can start chatting with StudentAI by typing in your
 #### API Key
 Before starting to use the app, do not forget to add your API key in  `secrets.dart` file.
 
-1. You can get using free key Providers from GitHub repo/discord server.
-   ex. [ChimeraGPT](https://discord.gg/pCarpb3Qxc)
-2. Join the above discord and send the command `/get key` to get your API key
+1. You can get free key Providers from [Generative AI for Developers](https://developers.generativeai.google/#)
+   ex. [MakerSuite](https://makersuite.google.com/app/apikey)
 
 ### Data
 All data used in this app to create cards, forms, and prompts come through our API - StudentAI_API. 
