@@ -89,21 +89,21 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: itrans,
         title: const AppTitle(),
         elevation: 0.0,
-        actions: [
-          ServerIndicator(isServerUp: isServerUp),
-          const SizedBox(width: 5),
-          const IButton(),
-          const SizedBox(width: 10)
+        actions: const [
+          // ServerIndicator(isServerUp: isServerUp),
+          SizedBox(width: 5),
+          IButton(),
+          SizedBox(width: 10)
         ],
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
-            ),
-          ),
+          // Container(
+          //   decoration: const BoxDecoration(
+          //     image: DecorationImage(
+          //         image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
+          //   ),
+          // ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

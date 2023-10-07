@@ -10,7 +10,8 @@ const double cardAspectRatio = 0.85;
 const double fsBanner = 25.0;
 
 const itextColor = Colors.white;
-const ibg = Colors.white12;
+// const ibg = Colors.white12;
+const ibg = Colors.black;
 final iwhite0_6 = Colors.white.withOpacity(0.6);
 const itrans = Colors.transparent;
 const iradium = Color.fromRGBO(173, 245, 40, 1);
