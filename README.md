@@ -36,6 +36,7 @@ To get started with StudentAI, you will need to:
 
 4. Run `flutter pub get` to install the dependencies.
 5. Run `flutter run` to start the app.
+6. Run `flutter build apk --no-tree-shake-icons` to build `.apk` file or Application
 
 ### Usage
 
